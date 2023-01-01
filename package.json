@@ -1,0 +1,34 @@
+{
+  "name": "satorbviz",
+  "version": "0.0.1",
+  "description": "### Introduction:",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
+    "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
+    "tests:webkit": "playwright test --config=playwright.config.ts --project=WebKit",
+    "alltests": "npm run tests:chrome && npm run tests:firefox && npm run tests:webkit"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salbaroudi/SatelliteOrbitVisualizer.git"
+  },
+  "author": "Sean al-Baroudi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salbaroudi/SatelliteOrbitVisualizer/issues"
+  },
+  "homepage": "https://github.com/salbaroudi/SatelliteOrbitVisualizer#readme",
+  "dependencies": {
+    "@playwright/test": "^1.29.1",
+    "nodemon": "^2.0.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
+    "three": "^0.148.0",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0"
+  }
+}
