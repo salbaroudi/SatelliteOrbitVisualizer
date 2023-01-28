@@ -22,7 +22,22 @@ The stages below will discuss the development cycle milestones.
 
 To get all of the node modules listed above working together, is not a trivial task. 
 
-They were tested in pairs, and then fully integrated together with a trivial UI and visualization, as a proof of concept. 
+They were tested in pairs, and then fully integrated together with a trivial UI and visualization, as a proof of concept. The project was integrated as follows:
+
+- First, each package was installed on its own.
+- Get React+Redux running on its own.
+- React and TypeScript 
+- TypeScript and Three.js
+- React, TypeScript, Three.js
+- React and Playwright
+- React, TypeScript, Three.js and Playwright
+- React and Nodemon
+- React, TypeScript, Three.js, Playwright and Nodemon.
+
+
+
+
+
 
 Of particular novel note is the use of Github Co-pilot. I predict that the world will move from 10x $\rightarrow$ 100x development in the next few years. So its good to learn this tool now.
 

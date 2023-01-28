@@ -8,7 +8,7 @@
     "tests:chrome": "playwright test --config=playwright.config.ts --project=Chromium",
     "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
     "tests:webkit": "playwright test --config=playwright.config.ts --project=WebKit",
-    "alltests": "npm run tests:chrome && npm run tests:firefox && npm run tests:webkit"    
+    "alltests": "npm run tests:chrome && npm run tests:firefox && npm run tests:webkit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
   "homepage": "https://github.com/salbaroudi/SatelliteOrbitVisualizer#readme",
   "dependencies": {
     "@playwright/test": "^1.29.1",
+    "@reduxjs/toolkit": "^1.9.1",
+    "live-server": "^1.2.2",
     "nodemon": "^2.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
