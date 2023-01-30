@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import EarthImg from "../em-watercolor-earth.jpg";
 import { useAppSelector, useAppDispatch } from '../../app/hooks';
 
-//All of our action and reducer logic bundled in a slice module.
+//All of our actions and reducers bundled in a slice module.
+//We import them together, regardless of type/usage.
 import {
   decrement,
   increment,
@@ -13,6 +14,7 @@ import {
   selectCount,
   selectVisibility,
   toggleVisibility,
+  getAngle,
   rotateCW45,
 } from './counterSlice';
 import styles from './Counter.module.css';
@@ -40,15 +42,19 @@ if (useAppSelector(selectVisibility) == "visible") {
   imgVisCSS = styles.earthImgHidden;
 }
 
+//Next we get our current angle, and get ready to rotate our image.
+let angle = useAppSelector(getAngle) % 360;
 
-
+const imgStyle = {
+  transform: "rotate(" + angle + "deg)",
+};
 
 //For the second, we use custom rotation tags for the image.
 
   return (
     <div>
       <div className={styles.row}>
-        <img className={imgVisCSS} src={EarthImg} alt="The Earth" height={750} width={1200} />
+        <img className={imgVisCSS} style={imgStyle} src={EarthImg} alt="The Earth" height={750} width={750} />
       </div>
       <div className={styles.row}>
 
@@ -60,9 +66,9 @@ if (useAppSelector(selectVisibility) == "visible") {
             </button>
             <button
               className={styles.button}
-              onClick={() => 0}
+              onClick={() => dispatch(rotateCW45())}
             >
-              Rotate 30 Degrees
+              Rotate 45 Degrees
             </button>
       </div>
 
