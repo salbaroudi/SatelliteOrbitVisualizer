@@ -24,14 +24,21 @@ To get all of the node modules listed above working together, is not a trivial t
 
 They were tested in pairs, and then fully integrated together with a trivial UI and visualization, as a proof of concept. The project was integrated as follows:
 
-- First, each package was installed on its own.
-- Get React+Redux running on its own.
-- React and TypeScript 
+- First, each package was installed on its own. :heavy_check_mark:
+- Get React+Redux running on its own. :heavy_check_mark:
+- React and TypeScript :heavy_check_mark:
+    - This was accomplished by using a template React-Redux project with a typescript option.
 - TypeScript and Three.js
-- React, TypeScript, Three.js
+    - Three.js can already work with TS or JS. We use [react-three-fibre]() to integrate React and Three properly.
+    - A template project will need to be made, as an example.
+- React, TypeScript, Three.js :x:
+    - React-three-fibre uses TS. No need for this.
+- React, React-Three-Fibre :heavy_check_mark:
+    - Works fine. Usage of JSX tags to render meshes and elements.
 - React and Playwright
 - React, TypeScript, Three.js and Playwright
-- React and Nodemon
+- React and Nodemon :x:
+    - React Frameworks come with Webpack, which does the job of Nodemon for us automatically (update on save)
 - React, TypeScript, Three.js, Playwright and Nodemon.
 
 
