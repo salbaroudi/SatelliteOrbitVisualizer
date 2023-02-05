@@ -25,6 +25,8 @@ To get all of the node modules listed above working together, is not a trivial t
 They were tested in pairs, and then fully integrated together with a trivial UI and visualization, as a proof of concept. The project was integrated as follows:
 
 - First, each package was installed on its own. :heavy_check_mark:
+- React and Nodemon :x:
+    - React Frameworks come with Webpack, which does the job of Nodemon for us automatically (update on save)
 - Get React+Redux running on its own. :heavy_check_mark:
 - React and TypeScript :heavy_check_mark:
     - This was accomplished by using a template React-Redux project with a typescript option.
@@ -35,10 +37,7 @@ They were tested in pairs, and then fully integrated together with a trivial UI 
     - React-three-fibre uses TS. No need for this.
 - React, React-Three-Fibre :heavy_check_mark:
     - Works fine. Usage of JSX tags to render meshes and elements.
-- React and Playwright
-- React, TypeScript, Three.js and Playwright
-- React and Nodemon :x:
-    - React Frameworks come with Webpack, which does the job of Nodemon for us automatically (update on save)
+    - After this point, rendering a basic earth and orbits, with basic Component buttons was attempted.
 - React, TypeScript, Three.js, Playwright and Nodemon.
 
 
@@ -55,3 +54,10 @@ Of particular novel note is the use of Github Co-pilot. I predict that the world
 1) [Setting up a TypeScript + Node.js project](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
 
 2) [Running multiple node scripts (cwilby's comment)](https://gist.github.com/coryhouse/b26f49bead69066844d9)
+
+3) [React Info on Hooks] (https://reactjs.org/docs/hooks-overview.html)
+
+4) [Dealing with Canvas Sizing] (https://stackoverflow.com/questions/70899346/three-fiber-canvas-size)
+
+5) [Adding Orbit Controls to Three-Fibre-JS] (https://www.tutorialspoint.com/adding-orbitcontrols-in-react-using-reactthree-fiber)
+

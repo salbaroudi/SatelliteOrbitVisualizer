@@ -1,9 +1,8 @@
 import * as THREE from 'three'
-import { createRoot } from 'react-dom/client'
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame, ThreeElements } from '@react-three/fiber'
+import { useRef, useState } from 'react'
+import { useFrame, ThreeElements } from '@react-three/fiber'
 
-export default function Box(props: ThreeElements['mesh']) {
+export function Box(props: ThreeElements['mesh']) {
   const mesh = useRef<THREE.Mesh>(null!)
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
@@ -21,3 +20,34 @@ export default function Box(props: ThreeElements['mesh']) {
     </mesh>
   )
 }
+
+export function Earth(props: ThreeElements['mesh']) {
+  const mesh = useRef<THREE.Mesh>(null!)
+  return (
+    <mesh {...props} ref={mesh}>
+      <sphereBufferGeometry args={[0.5, 128, 128]} />
+      <meshStandardMaterial color="blue" />
+    </mesh>
+  )
+}
+
+export function Equator(props: ThreeElements['mesh']) {
+  const mesh = useRef<THREE.Mesh>(null!)
+  return (
+    <mesh {...props} ref={mesh} rotation={[0, 0, -0.42]}>
+      <cylinderGeometry args={[0.6, 0.6, 0.02, 64]} />
+      <meshStandardMaterial color="red"/>
+    </mesh>
+  )
+}
+
+export function NSPole(props: ThreeElements['mesh'] ) {
+  const mesh = useRef<THREE.Mesh>(null!)
+  return (
+    <mesh {...props} ref={mesh} rotation={[0, 0, -0.42]}>
+      <cylinderGeometry args={[0.01, 0.01, 2, 16]} />
+      <meshStandardMaterial color="orange"/>
+    </mesh>
+  )
+}
+
