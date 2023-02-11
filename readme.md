@@ -61,3 +61,6 @@ Of particular novel note is the use of Github Co-pilot. I predict that the world
 
 5) [Adding Orbit Controls to Three-Fibre-JS] (https://www.tutorialspoint.com/adding-orbitcontrols-in-react-using-reactthree-fiber)
 
+6) [Understanding how to group objects with JSX tags] (https://codesandbox.io/s/6oei7)
+
+7) [Using component functions as support for export functions (renders as JSX in file)](https://codesandbox.io/s/0z8i2c)

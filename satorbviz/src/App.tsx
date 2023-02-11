@@ -8,7 +8,7 @@ import './App.css';
 //Integrating React-Three-Fibre
 import * as THREE from 'three'
 import { Canvas, useFrame, ThreeElements, useThree } from '@react-three/fiber'
-import {Box, Earth, Equator, NSPole} from "./threefibre"
+import {Box, Earth, Equator, NSPole, Axes, Arrow} from "./threefibre"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 import { Camera, Color } from 'three';
 
@@ -50,6 +50,8 @@ function App() {
             <Earth position={[0,0,0]} />
             <Equator position={[0,0,0]} />
             <NSPole position={[0,0,0]} />
+            <Axes position={[0,0,0]} />
+            <Arrow position={[1,0,0]} />
           </Canvas>
       </div>
       </header>

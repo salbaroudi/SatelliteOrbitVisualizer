@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  background: #08054f;
+  background-image: url("../public/galaxy_starfield.png"); 
+}
