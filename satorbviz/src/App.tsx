@@ -50,8 +50,7 @@ function App() {
             <Earth position={[0,0,0]} />
             <Equator position={[0,0,0]} />
             <NSPole position={[0,0,0]} />
-            <Axes position={[0,0,0]} />
-            <Arrow position={[1,0,0]} />
+            <Axes />
           </Canvas>
       </div>
       </header>

@@ -1,8 +1,6 @@
 import * as THREE from 'three'
 import { useRef, useState } from 'react'
-import { useFrame, ThreeElements, useLoader } from '@react-three/fiber'
-import { group } from 'console'
-import { TextureLoader } from 'three'
+import { useFrame, ThreeElements, useLoader, useThree } from '@react-three/fiber'
 
 export function Box(props: ThreeElements['mesh']) {
   const mesh = useRef<THREE.Mesh>(null!)
@@ -55,6 +53,7 @@ export function NSPole(props: ThreeElements['mesh'] ) {
   )
 }
 
+/*
 export function Axes(props: ThreeElements["mesh"]) {
   const mesh = useRef<THREE.Mesh>(null!)
   return (
@@ -74,18 +73,31 @@ export function Axes(props: ThreeElements["mesh"]) {
     </group>
   )
 }
+    <Arrow name="y-axis"  mesh-position={[0,0.5,0]} mesh-rotation={[0,0,0]} />
+    <Arrow name="z-axis"  mesh-position={[0,0,0.5]} mesh-rotation={[Math.PI/2,0,0]}/>
 
-export function Arrow(props: ThreeElements["mesh"]) {
+
+*/
+
+export function Axes(props: ThreeElements["mesh"]) {
   const mesh = useRef<THREE.Mesh>(null!)
   return (
-    <group position={[0,0,0]}>
-      <mesh {...props} ref={mesh} position={[0,3,0]} rotation={[0, 0, 0]}>
-        <cylinderGeometry args={[0.01, 0.01, 1, 16]} />
-        <meshStandardMaterial color="green"/>
+      <Arrow name="x-axis" position-x={[0.5,0,0]} rotation-z={Math.PI/2} />
+  )
+}
+
+
+export function Arrow(props: ThreeElements["mesh"]) {
+  const mesh = useRef<THREE.Mesh>(null!) 
+  return (
+    <group>
+      <mesh {...props} ref={mesh} position={[0,0,0]} rotation={[0, 0, 0]}>
+        <cylinderGeometry args={[0.01, 0.01, 2, 16]} />
+        <meshStandardMaterial color="green" />
       </mesh>
-      <mesh {...props} ref={mesh} position={[0,3.5,0]} rotation={[0, 0, 0]}>
+      <mesh {...props} ref={mesh} position={[0,1,0]} rotation={[0, 0, 0]}>
         <coneGeometry args={[0.025, 0.1, 16]} />
-        <meshStandardMaterial color="green"/>
+        <meshStandardMaterial color="green" />
       </mesh>
     </group>
   )
